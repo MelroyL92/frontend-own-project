@@ -5,7 +5,6 @@ import {useParams} from "react-router-dom";
 import {FetchGameInfoContext} from "../../context/FetchGameInfoContext.jsx";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
 import './GameDetails.css'
-import Image from "../../helpers/image.jsx";
 import DetailedInfoPage from "../../components/DetailedInfo/DetailedInfoPage.jsx";
 
 

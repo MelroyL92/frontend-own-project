@@ -15,12 +15,14 @@ const Image = ({src, alt, placeholderSrc = 'https://via.placeholder.com/600x400'
 
 
     return (
+        <div className="image-wrapper">
         <img
             src={handleImageError ? placeholderSrc : (imageLoaded ? src : placeholderSrc)}
             alt={alt}
             {...props}
             onLoad={handleImageLoad}
         />
+        </div>
     );
 };
 

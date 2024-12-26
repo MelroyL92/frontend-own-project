@@ -16,6 +16,8 @@ function Homepage() {
             <nav className="nav-class">
                 <NavLinks to="/movies" text="Movies"/>
                 <NavLinks to="/games" text="Games"/>
+                <NavLinks to="/reviews" text="Reviews"/>
+                <NavLinks to="/reviewPostPage" text="reviewposts"/>
             </nav>
             <section className="section-container">
 

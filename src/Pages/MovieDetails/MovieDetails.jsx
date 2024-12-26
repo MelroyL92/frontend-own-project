@@ -4,8 +4,8 @@ import {useParams} from "react-router-dom";
 import './MovieDetails.css'
 import axios from "axios";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
-import Image from "../../helpers/image.jsx";
 import DetailedInfoPage from "../../components/DetailedInfo/DetailedInfoPage.jsx";
+import Abortcontroller from "../../helpers/Abortcontroller.js";
 
 
 function MovieDetails() {
@@ -14,6 +14,8 @@ function MovieDetails() {
     const {fetchedMovie, setFetchedMovie} = useContext(FetchMovieInfoContext)
 
     let {id} = useParams();
+    Abortcontroller();
+
 
     useEffect(() => {
         async function fetchedMovie() {

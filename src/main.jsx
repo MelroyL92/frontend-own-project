@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import {BrowserRouter as Router} from "react-router-dom"
+import FetchGameInfoContext from "./context/FetchGameInfoContext.jsx";
+import FetchMovieInfoContext from "./context/FetchMovieInfoContext.jsx";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+ReactDOM.createRoot(document.getElementById('root')).render(
+
+    <Router>
+        <FetchMovieInfoContext>
+        <FetchGameInfoContext>
+                        <App />
+        </FetchGameInfoContext>
+        </FetchMovieInfoContext>
+    </Router>
 )
