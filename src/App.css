@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border{
+  border: 1px solid black;
+}
+
+
+#root {
+  text-align: center;
+}
+
+header{
+  background: grey;
+  width: 100%;
+  height: 20vh;
+  align-content: center;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 60vh;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.box-1 {
+  margin-right: 20px;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+  max-height: 100%;
+  min-height: 30%;
+  overflow: auto;
+}
+
+.box-2 li {
+  margin-bottom: 10px;
+  width: 90%;
+  height: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-2 li:hover {
+  transform: scale(1.05);
+}
+
+
+
+.item-class{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  list-style: none;
+
+}
+
+.overview-list-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.link-style {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  border-radius: 10%;
+  padding: 5px;
+  border: 3px solid grey;
+}
+
+.description-item{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.review-class {
+  flex: 1 1 calc(33.33% - 16px);
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.review-class p {
+  margin: 8px 0;
+  word-wrap: break-word;
+}
+
+footer{
+  width: 100%;
+  height: 10vh;
+  align-content: center;
+  background: grey;
+}
+
+
+
+/*NAVBAR*/
+.nav-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 5px 0 5px;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-class ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.nav-list {
+}
+
