@@ -1,0 +1,25 @@
+.review-overview{
+    flex:0  1 calc(33.33% - 25px);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 10px;
+    align-content: center;
+}
+
+.review-section-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    min-height: 30vh;
+    height: 60vh;
+}
+.list-style-review{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}

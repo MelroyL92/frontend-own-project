@@ -31,6 +31,7 @@ const MyGames = () => {
             </header>
             <nav className="nav-class">
                 <NavLinks to="/" text="Homepage"/>
+                <NavLinks to="/movies" text="Movies"/>
             </nav>
             <section className="section-container">
 
@@ -39,9 +40,10 @@ const MyGames = () => {
                 ) : error ? (
                     <p style={{color: "red"}}>Error: {error}</p>
                 ) : (
-                    <ul className="overview-list-item">
+                    <ul className="ul-list-style-games">
                         {games.map((game) => (
-                            <li key={game.id}>
+                            //change the name for this class
+                            <li key={game.id} className="games-list">
                                 <strong><Link to={`/games/${game.id}`} className="link-style">{game.name}</Link></strong>
                             </li>
                         ))}

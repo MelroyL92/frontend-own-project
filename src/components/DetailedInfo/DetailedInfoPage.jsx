@@ -1,10 +1,12 @@
 import Image from "../../helpers/image.jsx";
 import React from "react";
-import * as Proptypes from "prop-types";
 import PropTypes from "prop-types";
+import Reviews from "../Reviews/Reviews.jsx";
+import './DetailledInfoPage.css'
 
 
-function DetailedInfoPage({imageUrl, description, fields}) {
+
+function DetailedInfoPage({imageUrl, description, fields, reviews}) {
 
 
     return (
@@ -27,6 +29,7 @@ function DetailedInfoPage({imageUrl, description, fields}) {
                             </p>
                         </li>
                     ))}
+                    <Reviews reviews={reviews}/>
                 </div>
             </ul>
         </section>

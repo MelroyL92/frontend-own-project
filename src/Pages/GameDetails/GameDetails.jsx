@@ -6,6 +6,7 @@ import {FetchGameInfoContext} from "../../context/FetchGameInfoContext.jsx";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
 import './GameDetails.css'
 import DetailedInfoPage from "../../components/DetailedInfo/DetailedInfoPage.jsx";
+import Reviews from "../../components/Reviews/Reviews.jsx";
 
 
 function GameDetails() {
@@ -36,6 +37,8 @@ function GameDetails() {
         void fetchedGame()
     }, []);
 
+    console.log({fetchedGame})
+
     useEffect(()=>{
     },[fetchedGame])
 
@@ -47,18 +50,22 @@ function GameDetails() {
             </header>
             <nav className="nav-class">
                 <NavLinks to="/" text="Homepage"/>
+                <NavLinks to="/games" text="Games"/>
             </nav>
+
             <DetailedInfoPage
                 title={fetchedGame.title}
                 description={fetchedGame.description}
                 imageUrl={fetchedGame.imageUrl}
                 fields={[
-                {label: "Average Rating : ", value: fetchedGame.averageRating},
-                {label: "Publisher : ", value: fetchedGame.publisher},
-                {label: "Year of Release :", value: fetchedGame.yearOfRelease},
-                {label: "price: € ", value: fetchedGame.sellingPrice},
+                    {label: "Average Rating : ", value: fetchedGame.averageRating},
+                    {label: "Publisher : ", value: fetchedGame.publisher},
+                    {label: "Year of Release :", value: fetchedGame.yearOfRelease},
+                    {label: "price: € ", value: fetchedGame.sellingPrice},
                 ]}
-                />
+                reviews={fetchedGame.reviews}
+            />
+
             <footer>
                 <p>this is the footer section</p>
             </footer>

@@ -1,0 +1,11 @@
+
+.ul-list-style-games {
+    display: flex;
+    flex-direction: column;
+}
+
+.games-list{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+}

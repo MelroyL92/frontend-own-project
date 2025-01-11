@@ -1,0 +1,12 @@
+
+
+.list-items-games-movies{
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh; /* Minimum height when there's no content */
+    padding: 16px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in height calculation */
+    border: 1px solid #ddd; /* Optional: Visualize the container boundary */
+    background-color: #f9f9f9; /* Optional: Background for better aesthetics */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}

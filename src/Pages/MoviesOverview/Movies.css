@@ -1,0 +1,10 @@
+.ul-list-style-movies {
+    display: flex;
+    flex-direction: column;
+}
+
+.movies-list{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+}

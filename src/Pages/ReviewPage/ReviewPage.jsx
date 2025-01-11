@@ -1,6 +1,7 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
+import './ReviewPage.css'
 
 function ReviewPage() {
 
@@ -43,25 +44,31 @@ function ReviewPage() {
 
 
         return (
-           <main>
-               <header>Reviews</header>
-               <nav>
-                   <NavLinks to="/" text="Homepage"/>
-               </nav>
-               <section>
-                   {reviews.map((review) => (
-                       <li key={review.id}>
-                           <strong>{review.id}</strong>
-                           <p>Name of the item : {review.nameOfItem}</p>
-                           <p>Would Recommend: {review.wouldRecommend ? "Yes" : "No"}</p>
-                       </li>
-                   ))}
-
-               </section>
-           </main>
+            <main>
+                <header>Reviews</header>
+                <nav className="nav-class">
+                    <NavLinks to="/" text="Homepage"/>
+                    <NavLinks to="/reviewpostPage" text="Post review"/>
+                </nav>
+                <section className="review-section-container">
+                    <ul className="list-style-review">
+                        {reviews.map((review) => (
+                            <li key={review.id} className="review-overview">
+                                <strong>{review.id}</strong>
+                                <p>Name of the item : {review.nameOfItem}</p>
+                                <p>Would Recommend: {review.wouldRecommend ? "Yes" : "No"}</p>
+                                <p>Review text: {review.reviewText}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+                <footer>
+                    <p>footer area</p>
+                </footer>
+            </main>
 
         )
-    }
+}
 
 
 export default ReviewPage;

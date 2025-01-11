@@ -6,6 +6,7 @@ import axios from "axios";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
 import DetailedInfoPage from "../../components/DetailedInfo/DetailedInfoPage.jsx";
 import Abortcontroller from "../../helpers/Abortcontroller.js";
+import Reviews from "../../components/Reviews/Reviews.jsx";
 
 
 function MovieDetails() {
@@ -48,6 +49,7 @@ function MovieDetails() {
             </header>
             <nav className="nav-class">
                 <NavLinks to="/" text="Homepage"/>
+                <NavLinks to="/movies" text="Movies"/>
             </nav>
             <DetailedInfoPage
                 title={fetchedMovie.title}
@@ -59,7 +61,11 @@ function MovieDetails() {
                     {label : "Genre : ", value: fetchedMovie.genre},
                     {label : "Price : €", value: fetchedMovie.sellingPrice},
                     {label : "Year of release ", value: fetchedMovie.yearOfRelease},
-                ]}/>
+                ]}
+                reviews={fetchedMovie.reviews}
+            />
+
+
             <footer>
                 <p>this is the footer section</p>
             </footer>

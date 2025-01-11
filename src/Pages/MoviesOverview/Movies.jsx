@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import NavLinks from "../../components/Navlinks/NavLinks.jsx";
 import {Link} from "react-router-dom";
+import './Movies.css'
 
 const MyMovies = () => {
     const [movies, setMovies] = useState([]);
@@ -56,9 +57,10 @@ const MyMovies = () => {
                 ) : error ? (
                     <p style={{color: "red"}}>Error: {error}</p>
                 ) : (
-                    <ul className="overview-list-item">
+                    <ul className="ul-list-style-movies">
                         {movies.map((movie) => (
-                            <li key={movie.id}>
+                            //change the name for this class
+                            <li key={movie.id} className="movies-list">
                                 <strong><Link to={`/movies/${movie.id}`} className="link-style">{movie.name}</Link></strong>
                             </li>
                         ))}
